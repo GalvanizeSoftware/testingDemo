@@ -18,7 +18,7 @@ class TestBike < Minitest::Test
   end
 
   def test_red_bikes_are_not_cool
-    assert(!@red_bike.cool?)
+    refute(@red_bike.cool?)
   end
 
   def test_blue_bikes_are_cool
