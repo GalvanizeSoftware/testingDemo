@@ -1,5 +1,13 @@
 require './bike'
 
+def assert_equal(expected, actual)
+  if expected == actual
+    puts "."
+  else
+    raise "Test Failed! <#{expected}> != <#{actual}>"
+  end
+end
+
 def test_color
   #Setup
   bike = Bike.new("red")
@@ -11,11 +19,7 @@ def test_color
   actual = bike.color
 
   # Do they match up.
-  if expected == actual
-    puts "."
-  else
-    raise "Test Failed! <#{expected}> != <#{actual}>"
-  end
+  assert_equal(expected, actual)
 end
 
 def test_red_bikes_are_not_cool
@@ -29,11 +33,7 @@ def test_red_bikes_are_not_cool
   actual = bike.cool?
 
   # Do they match up.
-  if expected == actual
-    puts "."
-  else
-    raise "Test Failed! <#{expected}> != <#{actual}>"
-  end
+  assert_equal(expected, actual)
 end
 
 def test_blue_bikes_are_cool
@@ -47,11 +47,7 @@ def test_blue_bikes_are_cool
   actual = bike.cool?
 
   # Do they match up.
-  if expected == actual
-    puts "."
-  else
-    raise "Test Failed! <#{expected}> != <#{actual}>"
-  end
+  assert_equal(expected, actual)
 end
 
 # Run the tests by calling the methods
