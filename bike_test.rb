@@ -7,14 +7,7 @@ class TestBike < Minitest::Test
   end
 
   def test_color
-    # What I want the code to do.
-    expected = "red"
-
-    # What the code actually does.
-    actual = @red_bike.color
-
-    # Do they match up.
-    assert_equal(expected, actual)
+    assert_equal("red", @red_bike.color)
   end
 
   def test_red_bikes_are_not_cool
