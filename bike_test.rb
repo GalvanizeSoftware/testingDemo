@@ -18,27 +18,13 @@ class TestBike < Minitest::Test
   end
 
   def test_red_bikes_are_not_cool
-    # What I want the code to do.
-    expected = false
-
-    # What the code actually does.
-    actual = @red_bike.cool?
-
-    # Do they match up.
-    assert_equal(expected, actual)
+    assert(!@red_bike.cool?)
   end
 
   def test_blue_bikes_are_cool
     #Setup
     blue_bike = Bike.new("blue")
 
-    # What I want the code to do.
-    expected = true
-
-    # What the code actually does.
-    actual = blue_bike.cool?
-
-    # Do they match up.
-    assert_equal(expected, actual)
+    assert(blue_bike.cool?)
   end
 end
