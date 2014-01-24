@@ -4,6 +4,16 @@ class FizzBuzz
   end
 
   def run
-    1.upto(@upper_bound).to_a
+    numbers = 1.upto(@upper_bound)
+    result = []
+
+    numbers.each do |number|
+      if number % 3 == 0
+        result << "Fizz"
+      else
+        result << number
+      end
+    end
+    result
   end
 end
