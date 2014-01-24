@@ -8,16 +8,21 @@ class FizzBuzz
     result = []
 
     numbers.each do |number|
-      if number % 3 == 0 && number % 5 == 0
+      if multiple_of?(3, number) && multiple_of?(5,number)
         result << "FizzBuzz"
-      elsif number % 3 == 0
+      elsif multiple_of?(3, number)
         result << "Fizz"
-      elsif number % 5 == 0
+      elsif multiple_of?(5,number)
         result << "Buzz"
       else
         result << number
       end
     end
     result
+  end
+
+  private
+  def multiple_of?(divided_by, number_in_question)
+    number_in_question % divided_by == 0
   end
 end
