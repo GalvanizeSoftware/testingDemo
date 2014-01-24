@@ -10,4 +10,9 @@ class KeyValueStore
   def get(key)
     @bucket[key]
   end
+
+  def delete(key)
+    @bucket.delete(key)
+  end
 end
+

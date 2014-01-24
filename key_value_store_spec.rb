@@ -8,4 +8,12 @@ describe KeyValueStore do
 
     expect(store.get('student')).to eq 'gSchool'
   end
+
+  it 'allows for deletion of a key' do
+    store = KeyValueStore.new
+    store.add('student', 'gSchool')
+
+    store.delete('student')
+    expect(store.get('student')).to be_nil
+  end
 end
