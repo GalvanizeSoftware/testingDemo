@@ -10,6 +10,9 @@ class FizzBuzz
     numbers.each do |number|
       if number % 3 == 0
         result << "Fizz"
+
+      elsif number % 5 == 0
+        result << "Buzz"
       else
         result << number
       end
