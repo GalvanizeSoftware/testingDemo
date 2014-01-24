@@ -29,4 +29,12 @@ describe FizzBuzz do
     expect(actual[4]).to eq 'Buzz'
     expect(actual[9]).to eq 'Buzz'
   end
+
+  it 'substitutes FizzBuzz for multiples of 3 and 5' do
+    fizzbuzz = FizzBuzz.new(15)
+
+    actual = fizzbuzz.run
+
+    expect(actual[14]).to eq 'FizzBuzz'
+  end
 end
