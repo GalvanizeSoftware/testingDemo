@@ -14,5 +14,9 @@ class KeyValueStore
   def delete(key)
     @bucket.delete(key)
   end
+
+  def keys
+    @bucket.keys
+  end
 end
 

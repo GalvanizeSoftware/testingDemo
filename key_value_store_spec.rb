@@ -16,4 +16,12 @@ describe KeyValueStore do
     store.delete('student')
     expect(store.get('student')).to be_nil
   end
+
+  it 'can be queried for the existing keys' do
+    store = KeyValueStore.new
+    store.add('student', 'gSchool')
+    store.add('teacher', 'Mike')
+
+    expect(store.keys).to eq ['student', 'teacher']
+  end
 end
