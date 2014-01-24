@@ -8,17 +8,7 @@ class FizzBuzz
     result = []
 
     numbers.each do |number|
-      substitution = if multiple_of?(3, number) && multiple_of?(5,number)
-        "FizzBuzz"
-      elsif multiple_of?(3, number)
-        "Fizz"
-      elsif multiple_of?(5,number)
-        "Buzz"
-      else
-        number
-      end
-
-      result << substitution
+      result << substitution(number)
     end
     result
   end
@@ -27,5 +17,17 @@ class FizzBuzz
 
   def multiple_of?(divided_by, number_in_question)
     number_in_question % divided_by == 0
+  end
+
+  def substitution(number)
+    if multiple_of?(3, number) && multiple_of?(5, number)
+      "FizzBuzz"
+    elsif multiple_of?(3, number)
+      "Fizz"
+    elsif multiple_of?(5, number)
+      "Buzz"
+    else
+      number
+    end
   end
 end
