@@ -1,23 +1,23 @@
 require './bike'
-require 'minitest/autorun'
+require 'rspec/core'
 
-class TestBike < Minitest::Test
-  def setup
+describe Bike do
+  before do
     @red_bike = Bike.new("red")
   end
 
-  def test_color
-    assert_equal("red", @red_bike.color)
+  it 'knows what color it is' do
+    expect(@red_bike.color).to eq "red"
   end
 
-  def test_red_bikes_are_not_cool
-    refute(@red_bike.cool?)
+  it 'knows that red bikes are not cool' do
+    expect(@red_bike.cool?).to eq false
   end
 
-  def test_blue_bikes_are_cool
+  it 'knows that blue bikes are cool' do
     #Setup
     blue_bike = Bike.new("blue")
 
-    assert(blue_bike.cool?)
+    expect(blue_bike.cool?).to eq true
   end
 end
