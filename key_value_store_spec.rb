@@ -24,4 +24,16 @@ describe KeyValueStore do
 
     expect(store.keys).to eq ['student', 'teacher']
   end
+
+  it 'can be cleared' do
+    store = KeyValueStore.new
+    store.add('student', 'gSchool')
+    store.add('teacher', 'Mike')
+
+    store.clear
+
+    expect(store.keys).to eq []
+    expect(store.get('student')).to be_nil
+    expect(store.get('teacher')).to be_nil
+  end
 end

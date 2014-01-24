@@ -18,5 +18,9 @@ class KeyValueStore
   def keys
     @bucket.keys
   end
+
+  def clear
+    @bucket.clear
+  end
 end
 
