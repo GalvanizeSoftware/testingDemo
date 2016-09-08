@@ -7,7 +7,7 @@ describe Bike do
   end
 
   it 'knows what color it is' do
-    expect(@red_bike.color).to eq "red"
+    expect(@red_bike.color).to eq "rd"
   end
 
   it 'knows that red bikes are not cool' do
